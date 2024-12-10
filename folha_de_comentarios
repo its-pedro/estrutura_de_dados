@@ -1,0 +1,30 @@
+\\ criar fila (DONE)
+\\ entrada - nada no parametro da função
+\\ saida - retorna um ponteiro pra fila vazio (a.k. sem elementos)
+
+
+\\ adicionar um elemento a fila (ultima posicao) (DONE)
+\\ entrada - elemento e da fila em que adicionaremos o elemento (ultima posicao)
+\\ saida - nao retornaremos nada (void) mas a fila sera alterada 
+\\(adicionaremos 1 elemento a fila na ultima posicao)
+
+
+\\ retira um elemento da fila (primeira posicao) 
+\\ entrada -  fila em que retiraremos o elemento (o primeiro elemento)
+\\ saida - nao retornaremos nada (void) mas a fila sera alterada 
+\\(retiraremos o 1 elemento a fila)
+
+
+\\ imprime o primeiro item da fila (DONE)
+\\ entrada - fila 
+\\ saida - imprimir o 1 elemento e nao retornar nada (void) e nao alterar a fila
+
+
+\\ verifica se a fila tá vazia (DONE)
+\\ entrada - fila 
+\\ saida - retornar um "booleano" improvisado (char) ('1' - se vazia / '0' - se preenchida)
+
+
+\\ retorna o tamanho da fila (DONE)
+\\ entrada - fila 
+\\ saida - retornar o tamanho da fila (int)
