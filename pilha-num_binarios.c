@@ -23,7 +23,6 @@ void push(stack *pilha, int dado) {
         new->prox = ex;
         pilha->inicio = new;
         pilha->tamanho++;
-
     }
 }
 
@@ -51,15 +50,16 @@ void tamanho (stack *pilha) {
     printf("O tamanho da pilha eh %d\n", pilha->tamanho);
 }
 
-void divisões_sucessivas(stack *pilha, int num) {
+void divisões_sucessivas(stack *pilha, int num, int base) {
     int resto;
+    printf("num decimal = %d\n", num);
 
-    while(num > 1) {
-        resto = num%2;
+    while(num > base-1) {
+        resto = num%base;
         push(pilha, resto);
-        num = num/2;
+        num /= base;
     }
-    resto = num%2;
+    resto = num%base;
     push(pilha, resto);
 }
 
@@ -75,10 +75,14 @@ void imprime_pilha(stack *pilha) {
 
 int main() {
     stack *resto = cria_pilha();
-    int num;
+    int num, base;
 
+    printf("Insira o numero:");
     scanf("%d", &num);
-    divisões_sucessivas(resto, num);
+    printf("Base em que ele sera expresso:");
+    scanf("%d", &base);
+    divisões_sucessivas(resto, num, base);
+    printf("num na base %d = ",base);
     imprime_pilha(resto);
 
     free(resto);
